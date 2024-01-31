@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos del encabezado */
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilos de la barra de navegación */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius: 10px;
+}
+
+.topnav img {
+  width: 50px;
+  height: auto;
+  margin-right: auto; /* Coloca el logo a la izquierda */
+}
+
+.topnav #logo:hover {
+  background-color: #333;
+}
+
+.cart-icon {
+  margin-left: auto; /* Coloca el icono a la derecha */
+  padding: 10px; /* Espacio alrededor del icono */
+  color: #f2f2f2; /* Color del icono */
+}
+
+.fa-shopping-cart:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f07a"; /* Código del icono del carrito de compras */
+  font-size: 24px; /* Tamaño del icono */
+}
+
+/* Estilos del modal */
+.modal {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Habilita el desplazamiento cuando el contenido del modal es demasiado grande */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Centra el modal verticalmente y lo separa del borde superior */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ancho del contenido del modal */
+  max-width: 600px; /* Ancho máximo del contenido del modal */
+  border-radius: 5px;
+}
+
+/* Estilos del botón de cerrar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ccc; /* Línea divisoria entre elementos */
+  padding: 10px 0; /* Espacio interno entre elementos */
+}
+
+.cart-item p {
+  margin: 0; /* Eliminamos el margen vertical de los párrafos */
+}
+
+.cart-item button.remove {
+  background-color: #dc3545; /* Color de fondo para el botón de remover */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  padding: 5px 10px; /* Espaciado interno */
+  cursor: pointer; /* Cambio de cursor al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-left: 10px; /* Margen izquierdo */
+}
+
+.cart-item button.remove:hover {
+  background-color: #c82333; /* Rojo más oscuro al pasar el ratón */
+}
+
+/* Estilos para los botones de cantidad */
+.quantity-controls .quantity-btn {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+.quantity-controls .quantity-btn:hover {
+  background-color: #45a049;
+}
+
+.quantity-controls .quantity {
+  padding: 0 10px;
+}
+
+.remove {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.remove:hover {
+  background-color: #da190b;
+}
+
+
+
+.carousel-item img {
+  object-fit: cover; /* Usamos object-fit: cover; para asegurarnos de que las imágenes mantengan su proporción */
+}
+
+.section {
+  padding: 20px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 23%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card .add-to-cart-btn{
+  
+  width: 50%;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.price {
+  color: #777;
+  font-size: 14px;
+}
+
+.description {
+  color: #777;
+  font-size: 12px;
+}
+
+/* Estilos de la sección de ofertas */
+.offer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer {
+  width: 49%;
+}
+
+.offer img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+/* Estilos del pie de página */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  color: #ddd;
+}
+
+/* Estilos del botón "Agregar al carrito" */
+.add-to-cart-btn {
+  background-color: #007bff; /* Azul Bootstrap */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 80%; /* Ancho del botón */
+  margin: 10px auto; /* Centrar el botón */
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
+
+
+/* Estilos responsivos para pantallas pequeñas (600px o menos) */
+@media screen and (max-width: 600px) {
+  .card-container, .offer-container {
+    flex-direction: column;
+  }
+
+  .card, .offer {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
+

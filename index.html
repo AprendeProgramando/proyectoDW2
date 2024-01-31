@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3848e234e6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Ecommerce</title>
+</head>
+<body>
+<!-- Barra de navegación -->
+<div class="topnav">
+  <a href="#" id="logo"><img src="https://images.vexels.com/media/users/3/142890/isolated/preview/4ea2d7c4bf3cad23a4f18ee58752deb8-logotipo-de-anillos-de-alta-tecnologia.png" alt="Logo"></a> <!-- Logo -->
+  <a href="#">Inicio</a>
+  <a href="#">Productos</a>
+  <a href="#">Contacto</a>
+  <a href="#" id="cartButton" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cartCount">0</span></a>
+</div>
+
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Carrito de Compras</h2>
+    <div id="cartItems" class="cart-items"></div>
+    <p>Total: <span id="cartTotal">$0.00</span></p>
+  </div>
+</div>
+
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" >
+        <img src="https://cellfox.com.ar/wp-content/uploads/2023/12/banner-celular-04.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://cellfox.com.ar/wp-content/uploads/2023/12/banner-celular-05.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item active">
+        <img src="https://as2.ftcdn.net/v2/jpg/04/50/91/67/1000_F_450916782_ephwoRFhkUdv9sHuOegPgutiADRlz41o.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<!-- Sección de productos destacados -->
+<div class="section">
+  <h2>Productos Destacados</h2>
+  <div class="card-container">
+    <!-- Producto 1 -->
+    <div class="card">
+      <img src="https://www.radiosapienza.com.ar/Image/0/450_450-526613_1.jpg" alt="Producto 1">
+      <h3>Producto 1</h3>
+      <p class="price">$80</p>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Producto 1', 80)">Agregar al carrito</button>
+    </div>
+    <!-- Producto 2 -->
+    <div class="card">
+      <img src="https://medias.musimundo.com/medias/size300-179340-01.png?context=bWFzdGVyfGltYWdlc3wxNjY0Mjl8aW1hZ2UvcG5nfGg5ZS9oMDkvMTA1MzEwODE1ODQ2NzAvc2l6ZTMwMF8xNzkzNDBfMDEucG5nfDI3MzAyOTYxNGY1Njk3OTU2ZjdkOGYyMGFjNDVlOTdiNDBlOGE2ZTY3M2JkNmU5MmNiNmQ5Mjg4ODg5OTZmMjE" alt="Producto 2">
+      <h3>Producto 2</h3>
+      <p class="price">$40</p>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, iste.</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Producto 2', 40)">Agregar al carrito</button>
+      
+    </div>
+    <!-- Producto 3 -->
+    <div class="card">
+      <img src="https://olimpica.vtexassets.com/arquivos/ids/1192134-300-300?v=638339498801800000&width=300&height=300&aspect=true" alt="Producto 3">
+      <h3>Producto 3</h3>
+      <p class="price">$10</p>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, quisquam?</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Producto 3', 105)">Agregar al carrito</button>
+    </div>
+    <!-- Producto 4 -->
+    <div class="card">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_837732-MLA53825443933_022023-O.webp" alt="Producto 4">
+      <h3>Producto 4</h3>      
+      <p class="price">$120</p>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aliquid.</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Producto 4', 120)">Agregar al carrito</button>
+    </div>
+    <!-- Producto 5 -->
+    <div class="card">
+      <img src="https://images.fravega.com/f300/7e2a62c533d013360f4ed8cf8d8e9855.png" alt="Producto 5">
+      <h3>Producto 5</h3>      
+      <p class="price">$70</p>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, commodi?</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Producto 5', 70)">Agregar al carrito</button>
+    </div>
+    <!-- Producto 6 -->
+    <div class="card">
+      <img src="https://pronotebooks.com.ar/wp-content/uploads/2023/04/Lenovo-V14-1.webp" alt="Producto 6">
+      <h3>Producto 6</h3>
+      <p class="price">$95</p>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, aliquid.</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Producto 6', 95)">Agregar al carrito</button>
+    </div>
+    <!-- Producto 7 -->
+    <div class="card">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_802413-MLU72933208625_112023-O.webp" alt="Producto 7">
+      <h3>Producto 7</h3>
+      <p class="price">$135</p>
+      <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, ratione.</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Producto 7', 135)">Agregar al carrito</button>
+    </div>
+    <!-- Producto 8 -->
+    <div class="card">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_837509-MLA73101891197_112023-O.webp" alt="Producto 8">
+      <h3>Producto 8</h3>
+      <p class="price">$80</p>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, id?</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Producto 8', 80)">Agregar al carrito</button>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Ofertas</h2>
+  <div class="card-container">
+    <!-- Producto 1 -->
+    <div class="card">
+      <img src="https://www.radiosapienza.com.ar/Image/0/450_450-526613_1.jpg" alt="Producto 1">
+      <h3>Producto 1</h3>
+      <p class="price">$50</p>
+      <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, ducimus.</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Oferta 1', 50)">Agregar al carrito</button>
+    </div>
+
+    <div class="card">
+      <img src="https://www.radiosapienza.com.ar/Image/0/450_450-526613_1.jpg" alt="Producto 1">
+      <h3>Producto 2</h3>
+      <p class="price">$30</p>
+      <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, ducimus.</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Oferta 2', 30)">Agregar al carrito</button>
+    </div>
+
+    <div class="card">
+      <img src="https://www.radiosapienza.com.ar/Image/0/450_450-526613_1.jpg" alt="Producto 1">
+      <h3>Producto 3</h3>
+      <p class="price">$45</p>
+      <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, ducimus.</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Oferta 3', 45)">Agregar al carrito</button>
+    </div>
+
+    <div class="card">
+      <img src="https://www.radiosapienza.com.ar/Image/0/450_450-526613_1.jpg" alt="Producto 1">
+      <h3>Producto 4</h3>
+      <p class="price">$25</p>
+      <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, ducimus.</p>
+      <button class="add-to-cart-btn btn btn-primary" onclick="addToCart(this, 'Oferta 4', 25)">Agregar al carrito</button>
+    </div>
+    
+  </div>
+</div>
+
+  <!-- Pie de página -->
+  <div class="footer">
+    <p>Encontranos en nuestras redes!</p>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
